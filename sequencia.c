@@ -1,5 +1,5 @@
 #include <stdio.h>
-double meu_pow(double base, int exp) 
+double pot(double base, int exp) 
 {
     double resultado = 1.0;
     if (exp == 0) return 1.0;
@@ -14,7 +14,8 @@ double meu_pow(double base, int exp)
 double fatorial(int n) 
 {
     double f = 1.0;
-    for (int i = 1; i <= n; i++) f *= i;
+    for (int i = 1; i <= n; i++) 
+    f *= i;
     return f;
 }
 
@@ -32,7 +33,7 @@ int main() {
         {
             int expoente = 2 * i;
             int fat = 2 * i + 1;       
-            termo = meu_pow(x, expoente) / fatorial(fat);
+            termo = pot(x, expoente) / fatorial(fat);
             if (i % 2 != 0)
             termo *= -1;
         }
